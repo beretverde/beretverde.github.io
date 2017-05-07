@@ -14,49 +14,6 @@ Date:  06MAY2017
 <meta name="keywords" content="health club, exercise, family, Boise" />
 <meta name="author" content="Tyler Jacox" />
 
-<style>
-
-    /*Took this idea from w3 Schools*/
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-</style>
 
 </head>
 
@@ -65,20 +22,20 @@ Date:  06MAY2017
 <div><img src="images/diamond.jpg" alt="Diamond Health Club" usemap="#diamondmap"/></div>
 
 <map name="diamondmap" id="diamondmap">
-  <area shape="rect" coords="225,7,333,40" alt="Classes" href="classes.html">
-  <area shape="rect" coords="258,44,437,82" alt="Memberships" href="members.html">
-  <area shape="rect" coords="0,0,548,150" alt="Memberships" href="home.html">
+  <area shape="rect" coords="225,7,333,40" alt="Classes" href="classes.html" title="View our classes.">
+  <area shape="rect" coords="258,44,437,82" alt="Memberships" href="members.html" title="View our membership options.">
+  <area shape="rect" coords="0,0,548,150" alt="Memberships" href="home.html" title="Return to the Home Page.">
 </map>
 
    <hr/>
 
    <div>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#fac">Facilities</a>
+      <a href="#fac" title="Learn more about our facilities">Facilities</a>
       &nbsp;&nbsp;&#9830;&nbsp;&nbsp;
-      <a href="#staff">Staff</a>
+      <a href="#staff" title="Meet the DHC staff">Staff</a>
       &nbsp;&nbsp;&#9830;&nbsp;&nbsp;
-      <a href="#hours">Hours</a>
+      <a href="#hours" title="View the DHC hours of operation">Hours</a>
    </div>
    <hr />
 
