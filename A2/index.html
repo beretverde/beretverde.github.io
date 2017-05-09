@@ -131,16 +131,19 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
                 <legend>Personal Details</legend>
 
                 <label for="firstName">First Name</label>
-                <input type="text" name="firstName" value="First Name Only" autofocus><br>
+                <input type="text" name="firstName" placeholder="First Name only" autofocus><br>
                 <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" value="Last Name Only"><br>
+                <input type="text" name="lastName" placeholder="Last Name Only"><br>
                 <label for="dateBirth">Date of Birth</label>
-                <input type="date" name="dateBirth" value="mm/dd/yyy"><br>
+                <input type="date" name="dateBirth" placeholder="mm/dd/yyy"><br>
                 <label for="email">Email</label>
-                <input type="email" name="email" value="example@domain.com"><br>
+                <input type="email" name="email" placeholder="example@domain.com"><br>
 
                 <label for="url">Url</label>
-                <input type="url" name="url" value="http://mysite.com"><br>
+                <input type="url" name="url" placeholder="http://mysite.com"><br>
+
+                <label for="telephone">Telephone</label>
+                <input type="phone" name="telephone" placeholder="Eg: 801-546-6071"><br>
 
                 <label for="shoeSize">Url</label>
                 <input type="number" name="shoeSize" value="9" min="5" max="18" step=".5"><br>
@@ -165,9 +168,9 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
                     <legend>Card Type</legend>
                     <input type="radio" name="card" value="VISA"> VISA
                     <input type="radio" name="card" value="Mastercard">Mastercard
-                    <input type="radio" name="card" value="AMEX"> AMEX 
+                    <input type="radio" name="card" value="AMEX"> AMEX
                 </fieldset>
-                <input type="hidden" name="Feedback" value="This assignment is great for knocking of the rust with HTML, id like to do the same thing with a modern front end frame work like MDL or Bootstrap.">
+
 
                 <label for="name">Name</label>
                 <input type="text" name="Name" value="Name as it appears on the card"><br>
@@ -184,10 +187,12 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
 
             </fieldset>
             <fieldset>
-                           <input type="submit" name="" value="Submit Registration">
-            <input type="reset" name="" value="Clear Registration">
+                <input type="hidden" name="Feedback" value="This assignment is great for knocking of the rust with HTML, id like to do the same thing with a modern front end frame work like MDL or Bootstrap.">
+                
+                <input type="submit" name="" value="Submit Registration">
+                <input type="reset" name="" value="Clear Registration">
             </fieldset>
- 
+
 
         </form>
     </div>
