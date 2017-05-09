@@ -1,128 +1,198 @@
 <!DOCTYPE HTML>
 
 <html>
-<head>
-<title>A2 Assignment</title>
 
-<!-- 
+<head>
+    <title>A2 Assignment</title>
+
+    <!-- 
 File: https://beretverde.github.io/A2/index.html
 Date:  09MAY2017
 Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS GO HERE
 -->
 
-<meta charset="utf-8" />
-<meta name="description" content="A2 html5 form elements" />
-<meta name="keywords" content="form,html5,github" />
-<meta name="author" content="Tyler Jacox" />
+    <meta charset="utf-8" />
+    <meta name="description" content="A2 html5 form elements" />
+    <meta name="keywords" content="form,html5,github" />
+    <meta name="author" content="Tyler Jacox" />
 
-<style>
-table, th, td{
-    border: 1px solid black;
-}
-</style>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 
 </head>
 
-<body> 
-<div id="tableDemo">
-<h1>Schedule Table</h1>
-<!--summary attribute isnt supported in html5 but i put it in per the instructions summary="This table provides a listing of the room reservations from 8:00 a.m. to 5:00 p.m. at the Weber State CS Conference Room"-->
-<table id="schedule">
-<caption>CS Conference Room Schedule<br/>May 28-June 4, 2017</caption>
-<colgroup>
-    <col class="firstColumn">
-    <col class="timeColumns" span="18">
-</colgroup>
-<thead>
-  <tr>
-     <th></th>
-     <th colspan="8">morning</th>
-     <th colspan="2">noon</th>
-     <th colspan="8">afternoon</th>
-  </tr>
-</thead>
-<tbody>
-    <tr>
-        <th>Day</th>
-        <th>8:00</th>
-        <th>8:30</th>
-        <th>9:00</th>
-        <th>9:30</th>
-        <th>10:00</th>
-        <th>10:30</th>
-        <th>11:00</th>
-        <th>11:30</th>
-        <th>12:00</th>
-        <th>12:30</th>
-        <th>1:00</th>
-        <th>1:30</th>
-        <th>2:00</th>
-        <th>2:30</th>
-        <th>3:00</th>
-        <th>3:30</th>
-        <th>4:00</th>
-        <th>4:30</th>
-   </tr>
-     <tr>
-        <th>Sunday</th>
-        <td colspan="18">Closed</td>
-       
-   </tr>
-     <tr>
-        <th>Monday</th>
-        <td colspan="2">CS Breakfast Club</td>
-        <td colspan="4"></td>
-        <td colspan="4">Conference Of Software Engineers</td>
-        <td colspan="2"></td>
-        <td colspan="6">CS Book Group</td>
-   </tr>
-     <tr>
-        <th>Tuesday</th>
-         <td colspan="8">Computer Expo Set Up</td>
-        <td colspan="2"></td>
-        <td colspan="8">Computer Expo Opening Session</td>
-       
-   </tr>
-     <tr>
-        <th>Wednesday</th>
-         <td colspan="14">Computer Expo</td>
-        <td colspan="4">Awards Ceremony</td>
-   </tr>
-     <tr>
-        <th>Thursday</th>
-        <td colspan="2"></td>
-        <td colspan="3">ACM Club</td>
-        <td colspan="3">Study Abroad Club</td>
-        <td colspan="4">Women in Computing Club</td>
-        <td colspan="3"></td>
-        <td colspan="3">Tutoring</td>
-   </tr>
-     <tr>
-        <th>Friday</th>
-         <td colspan="2"></td>
-        <td colspan="3">Freshman Seminar</td>
-        <td colspan="3"></td>
-        <td colspan="2">CS Luncheon</td>
-         <td colspan="5">Senior Seminar</td>
-        <td colspan="3">Tutoring</td>
+<body>
+    <div id="tableDemo">
+        <h1>Schedule Table</h1>
+        <!--summary attribute isnt supported in html5 but i put it in per the instructions summary="This table provides a listing of the room reservations from 8:00 a.m. to 5:00 p.m. at the Weber State CS Conference Room"-->
+        <table id="schedule">
+            <caption>CS Conference Room Schedule<br/>May 28-June 4, 2017</caption>
+            <colgroup>
+                <col class="firstColumn">
+                <col class="timeColumns" span="18">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="8">morning</th>
+                    <th colspan="2">noon</th>
+                    <th colspan="8">afternoon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Day</th>
+                    <th>8:00</th>
+                    <th>8:30</th>
+                    <th>9:00</th>
+                    <th>9:30</th>
+                    <th>10:00</th>
+                    <th>10:30</th>
+                    <th>11:00</th>
+                    <th>11:30</th>
+                    <th>12:00</th>
+                    <th>12:30</th>
+                    <th>1:00</th>
+                    <th>1:30</th>
+                    <th>2:00</th>
+                    <th>2:30</th>
+                    <th>3:00</th>
+                    <th>3:30</th>
+                    <th>4:00</th>
+                    <th>4:30</th>
+                </tr>
+                <tr>
+                    <th>Sunday</th>
+                    <td colspan="18">Closed</td>
 
-   </tr>
-     <tr>
-        <th>Saturday</th>
-        <td colspan="11">Video Game Club</td>
-        <td colspan="4"></td>
-        <td colspan="3">Tutoring</td>
-     </tr>
-   <tr>
-       <td colspan="9">All Times Mountain Standard Time</td>
-       <td colspan="10">To Book the conference room, e-mail <a href="mailto:pbeck@weber.edu">Patrick beck</a></td>
+                </tr>
+                <tr>
+                    <th>Monday</th>
+                    <td colspan="2">CS Breakfast Club</td>
+                    <td colspan="4"></td>
+                    <td colspan="4">Conference Of Software Engineers</td>
+                    <td colspan="2"></td>
+                    <td colspan="6">CS Book Group</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td colspan="8">Computer Expo Set Up</td>
+                    <td colspan="2"></td>
+                    <td colspan="8">Computer Expo Opening Session</td>
 
-</tbody>
-</table>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td colspan="14">Computer Expo</td>
+                    <td colspan="4">Awards Ceremony</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td colspan="2"></td>
+                    <td colspan="3">ACM Club</td>
+                    <td colspan="3">Study Abroad Club</td>
+                    <td colspan="4">Women in Computing Club</td>
+                    <td colspan="3"></td>
+                    <td colspan="3">Tutoring</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td colspan="2"></td>
+                    <td colspan="3">Freshman Seminar</td>
+                    <td colspan="3"></td>
+                    <td colspan="2">CS Luncheon</td>
+                    <td colspan="5">Senior Seminar</td>
+                    <td colspan="3">Tutoring</td>
 
-</div>
+                </tr>
+                <tr>
+                    <th>Saturday</th>
+                    <td colspan="11">Video Game Club</td>
+                    <td colspan="4"></td>
+                    <td colspan="3">Tutoring</td>
+                </tr>
+                <tr>
+                    <td colspan="9">All Times Mountain Standard Time</td>
+                    <td colspan="10">To Book the conference room, e-mail <a href="mailto:pbeck@weber.edu">Patrick beck</a></td>
 
-<a href="https://validator.w3.org/nu/?doc=https://beretverde.github.io/A2/index.html">
+            </tbody>
+        </table>
+
+    </div>
+    <div id="formDemo">
+        <h1>Register for WEB 2350</h1>
+        <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" value="First Name Only" autofocus><br>
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" value="Last Name Only"><br>
+                <label for="dateBirth">Date of Birth</label>
+                <input type="date" name="dateBirth" value="mm/dd/yyy"><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" value="example@domain.com"><br>
+
+                <label for="url">Url</label>
+                <input type="url" name="url" value="http://mysite.com"><br>
+
+                <label for="shoeSize">Url</label>
+                <input type="number" name="shoeSize" value="9" min="5" max="18" step=".5"><br>
+
+            </fieldset>
+            <fieldset>
+                <legend>Billing Address</legend>
+                <label for="billAddress">Address</label>
+                <textarea rows="5" cols="25"></textarea><br>
+                <label for="country">Country</label>
+                <input list="countries" name="country"><br>
+                <datalist id="countries">
+                    <option value="USA"></option>
+                    <option value="Canada"></option>
+                    <option value="Mexico"></option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Card Details</legend>
+
+                <fieldset>
+                    <legend>Card Type</legend>
+                    <input type="radio" name="card" value="VISA"> VISA
+                    <input type="radio" name="card" value="Mastercard">Mastercard
+                    <input type="radio" name="card" value="AMEX"> AMEX 
+                </fieldset>
+                <input type="hidden" name="Feedback" value="This assignment is great for knocking of the rust with HTML, id like to do the same thing with a modern front end frame work like MDL or Bootstrap.">
+
+                <label for="name">Name</label>
+                <input type="text" name="Name" value="Name as it appears on the card"><br>
+
+                <label for="cardNum">Card number</label>
+                <input type="text" name="cardNum" value="">
+
+                <label for="secCode">Security Code</label>
+                <input type="number" name="secCode" value="" required pattern="[0-9]{3}"><br>
+
+                <label for="expDate">Expiry Date</label>
+                <input type="month" name="expDate" value="">
+
+
+            </fieldset>
+            <fieldset>
+                           <input type="submit" name="" value="Submit Registration">
+            <input type="reset" name="" value="Clear Registration">
+            </fieldset>
+ 
+
+        </form>
+    </div>
+
+    <a href="https://validator.w3.org/nu/?doc=https://beretverde.github.io/A2/index.html">
 <img src=" https://www.w3.org/html/logo/badge/html5-badge-h-solo.png " width="63" height="64" alt="HTML5 Powered
         " title="HTML5 Powered ">
 </a>
@@ -131,4 +201,5 @@ table, th, td{
 
 
 </body>
+
 </html>
