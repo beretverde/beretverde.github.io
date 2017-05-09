@@ -131,30 +131,30 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
                 <legend>Personal Details</legend>
 
                 <label for="firstName">First Name</label>
-                <input type="text" name="firstName" placeholder="First Name only" autofocus><br>
+                <input type="text" id ="firstName" name="firstName" placeholder="First Name only" autofocus><br>
                 <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" placeholder="Last Name Only"><br>
+                <input type="text" id ="lastName" name="lastName" placeholder="Last Name Only"><br>
                 <label for="dateBirth">Date of Birth</label>
-                <input type="date" name="dateBirth" placeholder="mm/dd/yyy"><br>
+                <input type="date" id ="dateBirth" name="dateBirth"><br>
                 <label for="email">Email</label>
-                <input type="email" name="email" placeholder="example@domain.com"><br>
+                <input type="email" id ="email" name="email" placeholder="example@domain.com"><br>
 
                 <label for="url">Url</label>
-                <input type="url" name="url" placeholder="http://mysite.com"><br>
+                <input type="url" id ="url" name="url" placeholder="http://mysite.com"><br>
 
                 <label for="telephone">Telephone</label>
-                <input type="phone" name="telephone" placeholder="Eg: 801-546-6071"><br>
+                <input type="tel" id ="telephone" name="telephone" placeholder="Eg: 801-546-6071"><br>
 
                 <label for="shoeSize">Url</label>
-                <input type="number" name="shoeSize" value="9" min="5" max="18" step=".5"><br>
+                <input type="number" id ="shoeSize" name="shoeSize" value="9" min="5" max="18" step="0.5"><br>
 
             </fieldset>
             <fieldset>
                 <legend>Billing Address</legend>
                 <label for="billAddress">Address</label>
-                <textarea rows="5" cols="25"></textarea><br>
+                <textarea rows="5" name="billAdress" id="billAddress" cols="25"></textarea><br>
                 <label for="country">Country</label>
-                <input list="countries" name="country"><br>
+                <input list="countries" id ="country" name="country"><br>
                 <datalist id="countries">
                     <option value="USA"></option>
                     <option value="Canada"></option>
@@ -173,24 +173,24 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
 
 
                 <label for="name">Name</label>
-                <input type="text" name="Name" value="Name as it appears on the card"><br>
+                <input type="text" name="Name" id ="name" value="Name as it appears on the card"><br>
 
                 <label for="cardNum">Card number</label>
-                <input type="text" name="cardNum" value="">
+                <input type="text" id ="cardNum" name="cardNum" value="">
 
                 <label for="secCode">Security Code</label>
-                <input type="number" name="secCode" value="" required pattern="[0-9]{3}"><br>
+                <input type="text" id ="secCode" name="secCode" pattern="[0-9]{3}" required><br>
 
                 <label for="expDate">Expiry Date</label>
-                <input type="month" name="expDate" value="">
+                <input type="month" id ="expDate" name="expDate">
 
 
             </fieldset>
             <fieldset>
-                <input type="hidden" name="Feedback" value="This assignment is great for knocking of the rust with HTML, id like to do the same thing with a modern front end frame work like MDL or Bootstrap.">
-                
-                <input type="submit" name="" value="Submit Registration">
-                <input type="reset" name="" value="Clear Registration">
+                <input type="hidden" name="Feedback" value="This assignment is great for knocking off the rust with HTML, id like to do the same thing with a modern front end frame work like MDL or Bootstrap.">
+
+                <input type="submit" value="Submit Registration">
+                <input type="reset" value="Clear Registration">
             </fieldset>
 
 
