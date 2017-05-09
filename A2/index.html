@@ -8,7 +8,7 @@
     <!-- 
 File: https://beretverde.github.io/A2/index.html
 Date:  09MAY2017
-Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS GO HERE
+Honor Code: I acknowledge that this code represents my own work: TBJ
 -->
 
     <meta charset="utf-8" />
@@ -29,9 +29,15 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
 <body>
     <div id="tableDemo">
         <h1>Schedule Table</h1>
-        <!--summary attribute isnt supported in html5 but i put it in per the instructions summary="This table provides a listing of the room reservations from 8:00 a.m. to 5:00 p.m. at the Weber State CS Conference Room"-->
+        <!--summary attribute isnt supported in html5 so following the W3C reccomendation https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+        I utilized a details tag inside the caption tag to provide support for assitive technologies.
+        -->
         <table id="schedule">
-            <caption>CS Conference Room Schedule<br/>May 28-June 4, 2017</caption>
+            <caption>CS Conference Room Schedule<br/>May 28-June 4, 2017
+            <details hidden>
+                This table provides a listing of the room reservations from 8:00 a.m. to 5:00 p.m. at the Weber State CS Conference Room
+            </details>
+            </caption>
             <colgroup>
                 <col class="firstColumn">
                 <col class="timeColumns" span="18">
@@ -131,22 +137,26 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
                 <legend>Personal Details</legend>
 
                 <label for="firstName">First Name</label>
-                <input type="text" id ="firstName" name="firstName" placeholder="First Name only" autofocus><br>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name only" autofocus><br>
+
                 <label for="lastName">Last Name</label>
-                <input type="text" id ="lastName" name="lastName" placeholder="Last Name Only"><br>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name Only"><br>
+
+                <!--date input type is not supported in all browsers, I would have used a modernizr polyfill but didnt want to break the scope of the assignment -->
                 <label for="dateBirth">Date of Birth</label>
-                <input type="date" id ="dateBirth" name="dateBirth"><br>
+                <input type="date" id="dateBirth" name="dateBirth"><br>
+
                 <label for="email">Email</label>
-                <input type="email" id ="email" name="email" placeholder="example@domain.com"><br>
+                <input type="email" id="email" name="email" placeholder="example@domain.com"><br>
 
                 <label for="url">Url</label>
-                <input type="url" id ="url" name="url" placeholder="http://mysite.com"><br>
+                <input type="url" id="url" name="url" placeholder="http://mysite.com"><br>
 
                 <label for="telephone">Telephone</label>
-                <input type="tel" id ="telephone" name="telephone" placeholder="Eg: 801-546-6071"><br>
+                <input type="tel" id="telephone" name="telephone" placeholder="Eg: 801-546-6071"><br>
 
                 <label for="shoeSize">Url</label>
-                <input type="number" id ="shoeSize" name="shoeSize" value="9" min="5" max="18" step="0.5"><br>
+                <input type="number" id="shoeSize" name="shoeSize" value="9" min="5" max="18" step="0.5"><br>
 
             </fieldset>
             <fieldset>
@@ -154,7 +164,7 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
                 <label for="billAddress">Address</label>
                 <textarea rows="5" name="billAdress" id="billAddress" cols="25"></textarea><br>
                 <label for="country">Country</label>
-                <input list="countries" id ="country" name="country"><br>
+                <input list="countries" id="country" name="country"><br>
                 <datalist id="countries">
                     <option value="USA"></option>
                     <option value="Canada"></option>
@@ -173,16 +183,18 @@ Honor Code: I acknowledge that this code represents my own work: YOUR INITIALS G
 
 
                 <label for="name">Name</label>
-                <input type="text" name="Name" id ="name" value="Name as it appears on the card"><br>
+                <input type="text" name="Name" id="name" value="Name as it appears on the card"><br>
 
                 <label for="cardNum">Card number</label>
-                <input type="text" id ="cardNum" name="cardNum" value="">
+                <input type="text" id="cardNum" name="cardNum" value="">
 
+                <!--pattern is not an allowed attribute on input type of number, I changed this to text-->
                 <label for="secCode">Security Code</label>
-                <input type="text" id ="secCode" name="secCode" pattern="[0-9]{3}" required><br>
+                <input type="text" id="secCode" name="secCode" pattern="[0-9]{3}" required><br>
 
+                <!--month input type is not supported in all browsers, I would have used a modernizr polyfill but didnt want to break the scope of the assignment -->
                 <label for="expDate">Expiry Date</label>
-                <input type="month" id ="expDate" name="expDate">
+                <input type="month" id="expDate" name="expDate">
 
 
             </fieldset>
