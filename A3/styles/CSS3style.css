@@ -1,3 +1,22 @@
 body {
-    background-color: yellow;
+    background-color: gray;
+    background-image: url(../images/flag.png), url(../images/driversLicense.jpg);
+    background-position: center bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+h1 {
+    text-shadow: 4px 1px white;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+div {
+    box-shadow: 5px 5px 5px white;
+    background-color: bisque;
+    height: 100px;
+    width: 200px;
+    background: linear-gradient(teal, tan);
 }
