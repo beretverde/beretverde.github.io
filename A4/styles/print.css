@@ -10,3 +10,18 @@
 
 
 /*remove extra elements*/
+
+#nav,
+#validation-badges,
+#callout,
+#footer {
+    display: none;
+}
+
+
+/*save ink by changing color to black and remove link styling*/
+
+* {
+    color: black !important;
+    text-decoration: none;
+}
