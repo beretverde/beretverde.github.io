@@ -11,7 +11,8 @@
 
 /*remove extra elements*/
 
-#nav,
+#nav a,
+#nav #logo,
 #validation-badges,
 #callout,
 #footer {
