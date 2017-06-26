@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>A5</title>
+
+    <!-- 
+Honor Code: I acknowledge that this code represents my own work: TBJ
+Date:  06/25/2017
+-->
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Javascript Demo" />
+    <meta name="keywords" content="A5" />
+    <meta name="author" content="Tyler Jacox" />
+
+    <style>
+        #table,
+        td {
+            border: 2px solid blue;
+        }
+    </style>
+
+    <script>
+        function createRows() {
+            var input;
+            do {
+                input = parseInt(prompt("Please enter a number"));
+
+            } while (!Number.isInteger(input) | input <= 0);
+
+            for (var x = input; x > 0; x--) {
+                var tableName = document.getElementById("table");
+                var rowVar = tableName.insertRow(0);
+                var cellVar = rowVar.insertCell(0);
+
+                cellVar.innerHTML = "ROW " + x;
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="createRows()">
+
+    <table id="table">
+
+    </table>
+
+
+</body>
+
+</html>

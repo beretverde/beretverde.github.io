@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>A5</title>
+
+    <!-- 
+Honor Code: I acknowledge that this code represents my own work: TBJ
+Date:  06/25/2017
+-->
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Javascript Demo" />
+    <meta name="keywords" content="A5" />
+    <meta name="author" content="Tyler Jacox" />
+
+    <script>
+        function date() {
+            var d = new Date();
+            var date = d.getDate();
+            var hour = d.getHours();
+            var day = d.getDay();
+            var month = d.getMonth();
+            var minute = d.getMinutes();
+            var year = d.getFullYear();
+
+            var greeting;
+            var dayName;
+            var monthName;
+
+            //Set AM/PM based on the hour
+            if (hour >= 12) {
+                format = "PM";
+            } else {
+                format = "AM";
+            }
+
+            //Custom greeting based on the hour
+            if (hour > 0 & hour < 12) {
+                greeting = "Morning";
+            } else if (hour >= 12 & hour < 17) {
+                greeting = "Afternoon";
+            } else {
+                greeting = "Night";
+            }
+
+            //Convert to 12 hour time format
+            if (hour == 0) {
+                hour = 12;
+            } else if (hour > 12) {
+                hour -= 12;
+            }
+
+            // Set the Name of the day of the week
+            if (day == 0) {
+                dayName = "Sunday";
+            } else if (day == 1) {
+                dayName = "Monday";
+            } else if (day == 2) {
+                dayName = "Teusday";
+            } else if (day == 3) {
+                dayName = "Wednesday";
+            } else if (day == 4) {
+                dayName = "Thursday";
+            } else if (day == 5) {
+                dayName = "Friday";
+            } else {
+                dayName = "Saturday";
+            }
+            //Set the name of the calendar month
+            if (month == 0) {
+                monthName = "January"
+            } else if (month == 1) {
+                monthName = "February"
+            } else if (month == 2) {
+                monthName = "March"
+            } else if (month == 3) {
+                monthName = "April"
+            } else if (month == 4) {
+                monthName = "May"
+            } else if (month == 5) {
+                monthName = "June"
+            } else if (month == 6) {
+                monthName = "July"
+            } else if (month == 7) {
+                monthName = "August"
+            } else if (month == 8) {
+                monthName = "September"
+            } else if (month == 9) {
+                monthName = "October"
+            } else if (month == 10) {
+                monthName = "November"
+            } else if (month == 11) {
+                monthName = "December"
+            }
+            //Concatenate and display with alert
+            alert("Good " + greeting + ", it is " + hour + ":" + minute + " " + format + " on " + dayName + ", " + monthName + " " + date + ", " + year + ".");
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <input type=“ button” value="Click here to display date" OnClick="date()">
+
+
+</body>
+
+</html>
