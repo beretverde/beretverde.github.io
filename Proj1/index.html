@@ -219,14 +219,14 @@
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <img class="img-responsive center-block" src="img/developer-associate.png" alt="Aws Certified">
+                    <img class="img-responsive center-block" src="img/da.png" alt="Aws Certified">
                     <h2>AWS Certified Developer-Associate </h2>
                     <p>The Amazon Web Services platform is vast yet powerful. The developer certfication really helped me to understand the power of DEV Ops tools. I look forward to taking the developer professional exam in the near future.</p>
                     <p><a class="btn btn-default" target="_blank" href="https://aws.amazon.com/certification/our-certifications/" role="button">View details &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <img class="img-responsive center-block" src="img/Solutions-Architect-Associate.png" alt="Generic placeholder image">
+                    <img class="img-responsive center-block" src="img/sa.png" alt="Generic placeholder image">
                     <h2>AWS Certified Solutions Architect – Associate</h2>
                     <p>Providing solutions that not only work, but will be secure, highly available, and cost effective is my goal. Architecting solutions that leverage the cloud is not only a passion but a necessity. Ill be taking the professional exam
                         in the next few months.</p>
@@ -361,9 +361,13 @@
         </div>
 
         <div class="row">
-            <div class="fill-screen img-responsive fixed-attachment" style="background-image: url(img/family.png)">
+            <div class="fill-screen img-responsive fixed-attachment" style="background-image: url(img/bridge.png)" usemap="#fammap">
             </div>
+
         </div>
+
+
+
         <div class="row content-filler" id="contact">
 
             <h2 class="text-center">Contact Me</h2>
@@ -378,9 +382,17 @@
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
+            <img class="img-responsive"src="img/family2.png" alt="" usemap="#Map" />
+            <map name="Map" id="Map">
+                <area data-toggle="tooltip" title="Savannah" alt="" title="" href="#" shape="poly" coords="1536,492,1543,698,1742,707,1747,491" />
+                <area data-toggle="tooltip" title="Chad" alt="" title="" href="#" shape="poly" coords="1340,479,1551,464,1534,215,1290,220" />
+                <area data-toggle="tooltip" title="Annika" alt="" title="" href="#" shape="poly" coords="1094,320,1129,559,1293,551,1272,308" />
+                <area data-toggle="tooltip" title="Me" alt="" title="" href="#" shape="poly" coords="869,410,1059,414,1048,148,854,166" />
+                <area data-toggle="tooltip" title="Mindy" alt="" title="" href="#" shape="poly" coords="505,331,759,341,693,600,490,571" />
+            </map>
+
         </div>
     </div>
-
 
 
     <footer class="container-fluid">
@@ -391,7 +403,7 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js" integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA=" crossorigin="anonymous"></script>
 
     <script src="js/vendor/jquery.lineProgressbar.js"></script>
-
+    <script src="js/vendor/imageMapResizer.min.js"></script>
     <script>
         $('#aws').LineProgressbar({
             percentage: 90,
@@ -447,6 +459,10 @@
             $('body').scrollspy({
                 target:'.navbar'
             });
+        });
+
+        $(document).ready(function() {
+            $('map').imageMapResize();
         });
 
 
