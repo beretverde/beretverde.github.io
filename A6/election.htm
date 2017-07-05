@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--
+
+   A8: Congressional Race Results
+   Author:Tyler Jacox
+   Date:04JUL2017
+
+-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" /> -->
+    <meta name="description" content="A6" />
+    <meta name="keywords" content="CSS3,Html5,JS" />
+    <meta name="author" content="Tyler Jacox" />
+
+    <title>Congressional Races</title>
+    <link href="results.css" rel="stylesheet" type="text/css" />
+    <script src="votes.js"></script>
+
+    <script>
+
+        //add up all the votes in the array
+        function totalVotes(votes) {
+            var total = 0;
+            for (x = 0; x < votes.length; x++) {
+                total += votes[x];
+            }
+            return total;
+        }
+
+        //calculates a percentage and rounds
+        function calcPercent(item, sum) {
+            return Math.round((item / sum) * 100);
+        }
+
+        //Creates a bar for a single canidate. I had to concatenate the html strings for the variable to return the value correctly.
+
+        function createBar(partyType, percent) {
+            var barText;
+            switch (partyType) {
+
+                case 'D':
+                    barText = "<td class='dem'>"+"</td>";
+                    break;
+                case 'R':
+                    barText = "<td class ='rep'>"+"</td>";
+                    break;
+                case 'I':
+                    barText = "<td class ='ind'>"+"</td>";
+                    break;
+                case 'G':
+                    barText = "<td class ='green'>"+"</td>";
+                    break;
+                case 'L':
+                    barText = "<td class ='lib'>"+"</td>";
+                    break;
+            }
+
+
+            //Add cells for the graph based on the percent
+            //because of JS joisting When I had x as the incrementer, it would change the value of the showResults loop as well. Good lesson on the gotchas of JS.
+            for (y = 1; y <= percent; y++) {
+                document.write(barText);
+            }
+
+        }
+        //create a table and display the results.
+        function showResults(race, name, party, votes) {
+            var totalV = totalVotes(votes);
+            document.write("<h2>" + race + "</h2>");
+            document.write("<table>");
+            document.write("<tr>");
+            document.write("<th>Canidate</th>");
+            document.write("<th class='num'>Votes</th>");
+            document.write("<th class='num'>%</th>");
+            document.write("</tr>");
+
+            for (x = 0; x < name.length; x++) {
+
+                document.write("<tr>");
+                document.write("<td>" + name[x] + " " + "("+party[x]+")" + "</td>");
+                document.write("<td class='num'>" + votes[x] + "</td>");
+
+                var percent = calcPercent(votes[x], totalV);
+                document.write("<td class='num'>" +"("+ percent +")%" + "</td>");
+
+                createBar(party[x], percent);
+                document.write("</tr>");
+
+
+            }
+            document.write("</table>");
+
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="intro">
+        <p><img src="logo.jpg" alt="Election Day Results" /></p>
+        <a href="#">Election Home Page</a>
+        <a href="#">President</a>
+        <a href="#">Senate Races</a>
+        <a href="#">Congressional Races</a>
+        <a href="#">State Senate</a>
+        <a href="#">State House</a>
+        <a href="#">Local Races</a>
+        <a href="#">Judicial</a>
+        <a href="#">Referendums</a>
+    </div>
+
+    <div id="results">
+        <h1>Congressional Races</h1>
+        <script>
+            //Great lessons learned, and hoping we use JSON next time instead of arrays.
+            showResults(race[0], name1, party1, votes1);
+            showResults(race[1], name2, party2, votes2);
+            showResults(race[2], name3, party3, votes3);
+            showResults(race[3], name4, party4, votes4);
+            showResults(race[4], name5, party5, votes5);
+
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
