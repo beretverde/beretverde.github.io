@@ -1,21 +1,15 @@
-/*
-   Function List:
-   showQuiz()
-      Used to make the quiz questions visible
 
-   hideQuiz()
-      Used to hide the quiz questions
-*/
-
-
+// Used to make the quiz questions visible
 function showQuiz() {
    document.getElementById("quiztable").style.visibility="visible";
 }
 
+// Used to hide the quiz questions
 function hideQuiz() {
    document.getElementById("quiztable").style.visibility="hidden";
 }
 
+//returns total correct answers and highlights the correct answer
 function gradeQuiz() {
    correct=0;
    if (document.quiz.q1[2].checked) correct++;
