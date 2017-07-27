@@ -1,0 +1,17 @@
+<html>
+<head>
+<script type = "text/javascript">
+function ChangePic(imagename){
+picnum = Math.floor(Math.random() * 5) + 1;
+newpicname = "images/kit"+picnum+".jpg";
+document.images[imagename].src = newpicname;
+}
+</script>
+</head>
+<body>
+<img src="images/kit1.jpg" width="504" height="504" name="kitpic" id = "kitpic" />
+<input type = “button” value = "Click here to change pic" OnClick =
+"ChangePic('kitpic')">
+</body>
+</html>
+
