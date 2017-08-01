@@ -1,27 +1,109 @@
 <html>
 <head>
-<script type = "text/javascript">
-function ChangePic(imagename){
-picnum = Math.floor(Math.random() * 5) + 1;
-newpicname = "images/kit"+picnum+".jpg";
-document.images[imagename].src = newpicname;
-}
-</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        var humanScore=0;
+        var computerScore=0;
+        var roundCount=1;
+
+        function ChangePic(imagename) {
+            picnum = Math.floor(Math.random() * 3) + 1;
+            newpicname = "images/comp" + picnum + ".jpg";
+            document.images[imagename].src = newpicname;
+
+        }
+
+
+//Add border to element that is selected
+        $(function () {
+            $("#choices img").click(function() {
+                $(this).toggleClass("selected").alert;
+                $("img").not(this).removeClass('selected');
+            });
+        });
+
+
+
+        function playGame(){
+
+
+            ChangePic('ai');
+            var userchoice=document.getElementsByClassName('selected');
+            scoreGame(userchoice[0].id,picnum);
+            roundCount++
+            if(roundCount==4){
+                alert("Game is over");
+                
+            }
+
+        }
+
+        function scoreGame(human, comp){
+
+            var message;
+
+
+            if(human=='paper'&comp==1){
+                message="Tie Game";
+            }else if(human=='paper'&comp==2){
+                message="You win!";
+                humanScore++;
+            }else if(human=='paper'&comp==3){
+                message="You lost!";
+                computerScore++;
+            }else if(human=='rock'&comp==1){
+                message="You lost!";
+                computerScore++;
+            }else if(human=='rock'&comp==2){
+                message="Tie Game";
+            }else if(human=='rock'&comp==3){
+                message="You Win!";
+                humanScore++;
+            }else if(human=='scissors'&comp==1){
+                message="You Win!";
+                humanScore++;
+            }else if(human=='scissors'&comp==2){
+                message="You lost!";
+                computerScore++;
+            }else if(human=='scissors'&comp==3){
+                message="Tie Game";
+            }
+
+            document.getElementById("outcome").innerHTML=message;
+            document.getElementById("cScore").innerHTML="Computer Score "+computerScore;
+            document.getElementById("hScore").innerHTML="Human Score "+humanScore;
+            document.getElementById("round").innerHTML="Round Count "+roundCount;
+        }
+
+
+    </script>
+    <style>
+
+        .selected {
+            border: solid 5px red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <h2>Make Your Choice</h2>
-    
-    <button>Play</button>
+<h1>Rock Paper Scissors</h1>
+<h2 id="cScore" name="cScore">Computer Score</h2>
+<h2 id="hScore" name="hScore">Human Score</h2>
+<h2 id="round" name="round">Round Count</h2>
 
-    <div>
-        <img src="images/paper.jpg" height="500" name="paper" id = "paper">
-        <img src="images/rock.jpg" height="500" name="rock" id = "rock">
-        <img src="images/scissors.jpg" height="500" name="scissors" id = "scissors">
-    </div>
- <!-- <img src="images/kit1.jpg" width="504" height="504" name="kitpic" id = "kitpic" /> 
- <input type = “button” value = "Click here to change pic" OnClick =
-"ChangePic('kitpic')">   -->
+<h2>Make Your Choice</h2>
+
+<button id="play_game" name="play_game" OnClick ="playGame()">Play</button>
+
+<div id="choices" name="choices">
+    <img src="images/paper.jpg" height="500" name="paper" id="paper" >
+    <img src="images/rock.jpg" height="500" name="rock" id="rock" >
+    <img src="images/scissors.jpg" height="500" name="scissors" id="scissors">
+</div>
+<h2>The Computer Chose</h2>
+<img src="images/ai.jpg" height="500" name="ai" id = "ai" />
+<h2 id="outcome" name="outcome">Outcome!</h2>
 </body>
 </html>
 

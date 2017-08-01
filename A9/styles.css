@@ -1,0 +1,144 @@
+body {
+    background: white url(images/ab1ip_uarc.gif) no-repeat 0px 0px;
+    color: black;
+    font: normal 14px/14px sans-serif;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+h1 {
+    font: bold 48px/60px sans-serif;
+    height: auto;
+    margin: 128px 8px 0px 260px;
+    min-height: 120px;
+    padding: 0px;
+    text-align: right;
+}
+
+* html h1 {
+    height: 120px;
+}
+
+/*
+p {
+ margin: 2em;
+}
+*/
+
+.index {
+    float: left;
+    font: normal 12px/13px sans-serif;
+    margin: 16px 0px 0px 0px;
+    padding: 0px;
+    width: 192px;
+}
+
+.index h3 {
+    background: url(images/gradient.png) repeat-y right;
+    font: bold 16px/20px sans-serif;
+    margin: 24px 0px 12px 0px;
+    padding: 4px 16px 4px 4px;
+    text-align: right;
+}
+
+.index ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.index ul li {
+    margin: 8px 6px 8px 22px;
+    padding: 0px;
+    text-indent: -16px;
+}
+
+.main {
+    /* padding: 4px 0px 4px 192px;*/
+    padding: 4px 0px 4px 200px;
+}
+
+.main h2 {
+    background: url(images/gradient.png) repeat-y;
+    font: bold 24px/30px sans-serif;
+    margin: 24px 0px 12px 0px;
+    max-width: 1024px;
+    padding: 8px 0px 8px 3em;
+    text-align: left;
+}
+
+.main h3 {
+    background: url(images/gradient.png) repeat-y;
+    font: bold 16px/20px sans-serif;
+    margin: 24px 0px 12px 0px;
+    max-width: 1024px;
+    padding: 4px 0px 4px 2em;
+    text-align: left;
+}
+
+.address {
+    background: #eee;
+    line-height: 1.5;
+    margin: 0em auto 0em 6em;
+    padding: 1em 2em;
+    white-space: pre;
+    width: 16em;
+}
+
+.continuation {
+    margin-top: 1em;
+    font-size: small;
+    text-align: center;
+}
+
+.date {
+    color: #008;
+    font: normal 8px/10px sans-serif;
+    margin-left: 2em;
+    text-align: right;
+}
+
+.footer {
+    background: url(images/ab1ip_key.gif) no-repeat bottom right;
+    clear: both;
+    height: auto;
+    margin: 0px;
+    min-height: 220px;
+    padding: 0px;
+}
+
+* html .footer {
+    height: 220px;
+}
+
+.footer ul {
+    background: url(images/transparent.png);
+    border: 1px solid;
+    list-style: none;
+    margin: 20px 0px 0px 6px;
+    padding: 0.5em;
+    width: 16em;
+}
+
+.footer ul li {
+    line-height: 1.2;
+    margin: 1em;
+    white-space: pre;
+}
+
+h1 a[href] {
+    color: inherit;
+    text-decoration: none;
+    color: blue;
+}
+
+.index a[href], .footer a[href] {
+    text-decoration: none;
+    font: normal 12px sans-serif;
+    color: blue;
+}
+
+.index a[href]:hover, .footer a[href]:hover {
+    text-decoration: underline;
+    color: blue;
+}
