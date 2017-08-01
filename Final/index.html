@@ -6,7 +6,7 @@
 
         var humanScore=0;
         var computerScore=0;
-        var roundCount=1;
+        var roundCount=0;
 
         function ChangePic(imagename) {
             picnum = Math.floor(Math.random() * 3) + 1;
@@ -33,17 +33,23 @@
             var userchoice=document.getElementsByClassName('selected');
             scoreGame(userchoice[0].id,picnum);
             roundCount++
-            if(roundCount==4){
-                alert("Game is over");
-                
+            if(roundCount>3){
+                humanScore=0;
+                computerScore=0;
+                roundCount=0;
+                printScores();
             }
 
+        }
+        function printScores(){
+            document.getElementById("cScore").innerHTML="Computer Score "+computerScore;
+            document.getElementById("hScore").innerHTML="Human Score "+humanScore;
+            document.getElementById("round").innerHTML="Round Count "+roundCount;
         }
 
         function scoreGame(human, comp){
 
             var message;
-
 
             if(human=='paper'&comp==1){
                 message="Tie Game";
@@ -72,11 +78,8 @@
             }
 
             document.getElementById("outcome").innerHTML=message;
-            document.getElementById("cScore").innerHTML="Computer Score "+computerScore;
-            document.getElementById("hScore").innerHTML="Human Score "+humanScore;
-            document.getElementById("round").innerHTML="Round Count "+roundCount;
+            printScores();
         }
-
 
     </script>
     <style>
