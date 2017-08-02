@@ -41,20 +41,27 @@
                 humanScore = 0;
                 computerScore = 0;
                 roundCount = 0;
+                ties=0;
                 printScores();
                 gameMessage();
             }
             roundCount++
-
+            document.getElementById("paper").classList.remove("selected");
+            document.getElementById("rock").classList.remove("selected");
+            document.getElementById("scissors").classList.remove("selected");
+            document.getElementById("paper").onclick=null;
+            document.getElementById("rock").onclick=null;
+            document.getElementById("scissors").onclick=null;
         }
         function printScores(){
             document.getElementById("cScore").innerHTML="Computer Score: "+computerScore;
             document.getElementById("hScore").innerHTML="Human Score: "+humanScore;
             document.getElementById("round").innerHTML="Round Count: "+roundCount;
+            document.getElementById("tieGames").innerHTML="Tie Games: "+ties;
         }
         function gameMessage(){
             var message;
-            message="The Game is Over! You won "+humanScore+", and the computer won "+computerScore+".There were "+ties+" ties.";
+            message="The Game is Over! You won "+humanScore+", and the computer won "+computerScore+". There were "+ties+" ties.";
             document.getElementById("gameoutcome").innerHTML=message;
         }
 
@@ -64,6 +71,12 @@
                 gameBoard.style.display = 'block';
                 start.style.display = 'none';
 
+        }
+
+        function toggleRounds(){
+            document.getElementById("paper").onclick=playGame();
+            document.getElementById("rock").onclick=playGame();
+            document.getElementById("scissors").onclick=playGame();
         }
         function scoreGame(human, comp){
 
@@ -156,7 +169,7 @@
                 <h2>The Computer Chose</h2>
             <img src="images/ai.jpg" height="500" name="ai" id = "ai" />
             <h2 id="outcome" name="outcome"></h2>
-                <button id="play_game" name="play_game" OnClick ="playGame()">Play Next Round</button>
+                <button id="play_game" name="play_game" OnClick ="toggleRounds()">Play Next Round</button>
             </div>
             <h1 id="gameoutcome" name="gameoutcome"></h1>
 
