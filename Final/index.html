@@ -6,7 +6,8 @@
 
         var humanScore=0;
         var computerScore=0;
-        var roundCount=0;
+        var ties=0;
+        var roundCount=1;
 
         function ChangePic(imagename) {
             picnum = Math.floor(Math.random() * 3) + 1;
@@ -18,8 +19,8 @@
 
 //Add border to element that is selected
         $(function () {
-            $("#choices img").click(function() {
-                $(this).toggleClass("selected").alert;
+            $("#humanchoices img").click(function() {
+                $(this).addClass("selected");
                 $("img").not(this).removeClass('selected');
             });
         });
@@ -28,31 +29,49 @@
 
         function playGame(){
 
-
             ChangePic('ai');
+            var computerchoice = document.getElementById('computerchoice');
+            computerchoice.style.display = 'block';
             var userchoice=document.getElementsByClassName('selected');
             scoreGame(userchoice[0].id,picnum);
-            roundCount++
-            if(roundCount>3){
-                humanScore=0;
-                computerScore=0;
-                roundCount=0;
+
+            if (roundCount <= 3) {
+                console.log("special case");
+            } else {
+                humanScore = 0;
+                computerScore = 0;
+                roundCount = 0;
                 printScores();
+                gameMessage();
             }
+            roundCount++
 
         }
         function printScores(){
-            document.getElementById("cScore").innerHTML="Computer Score "+computerScore;
-            document.getElementById("hScore").innerHTML="Human Score "+humanScore;
-            document.getElementById("round").innerHTML="Round Count "+roundCount;
+            document.getElementById("cScore").innerHTML="Computer Score: "+computerScore;
+            document.getElementById("hScore").innerHTML="Human Score: "+humanScore;
+            document.getElementById("round").innerHTML="Round Count: "+roundCount;
+        }
+        function gameMessage(){
+            var message;
+            message="The Game is Over! You won "+humanScore+", and the computer won "+computerScore+".There were "+ties+" ties.";
+            document.getElementById("gameoutcome").innerHTML=message;
         }
 
+        function myFunction() {
+            var gameBoard = document.getElementById('choices');
+            var start = document.getElementById('start_game');
+                gameBoard.style.display = 'block';
+                start.style.display = 'none';
+
+        }
         function scoreGame(human, comp){
 
             var message;
 
             if(human=='paper'&comp==1){
                 message="Tie Game";
+                ties++;
             }else if(human=='paper'&comp==2){
                 message="You win!";
                 humanScore++;
@@ -64,6 +83,7 @@
                 computerScore++;
             }else if(human=='rock'&comp==2){
                 message="Tie Game";
+                ties++;
             }else if(human=='rock'&comp==3){
                 message="You Win!";
                 humanScore++;
@@ -75,6 +95,7 @@
                 computerScore++;
             }else if(human=='scissors'&comp==3){
                 message="Tie Game";
+                ties++;
             }
 
             document.getElementById("outcome").innerHTML=message;
@@ -87,26 +108,64 @@
         .selected {
             border: solid 5px red;
         }
+        #choices, #computerchoice{
+            display: none;
+        }
+        #scores h2{
+            display:inline-block;
+            margin-left: 30px;
+            margin-right: 30px;
+            border: 2px solid black;
+        }
+        #wrapper{
+            text-align: center;
+        }
+        #container{
+            display: inline-block;
+        }
+        #humanchoices img{
+            margin:10px 20px 10px 20px;
+        }
+
     </style>
 </head>
 <body>
-<h1>Rock Paper Scissors</h1>
-<h2 id="cScore" name="cScore">Computer Score</h2>
-<h2 id="hScore" name="hScore">Human Score</h2>
-<h2 id="round" name="round">Round Count</h2>
 
-<h2>Make Your Choice</h2>
+<div id="wrapper" >
+    <div id="container" >
+        <h1>Rock Paper Scissors</h1>
+        <button id="start_game" name="start_game" onclick="myFunction()">PLAY</button>
 
-<button id="play_game" name="play_game" OnClick ="playGame()">Play</button>
+        <div id="choices" name="choices">
 
-<div id="choices" name="choices">
-    <img src="images/paper.jpg" height="500" name="paper" id="paper" >
-    <img src="images/rock.jpg" height="500" name="rock" id="rock" >
-    <img src="images/scissors.jpg" height="500" name="scissors" id="scissors">
+            <div id="scores" name="scores">
+                <h2 id="cScore" name="cScore">Computer Score</h2>
+                <h2 id="hScore" name="hScore">Human Score</h2>
+                <h2 id="tieGames" name="tieGames">Tie Games</h2>
+                <h2 id="round" name="round">Round Count</h2>
+            </div>
+            <h2>Make Your Choice</h2>
+            <div id="humanchoices" name="humanchoices">
+            <img src="images/paper.jpg" height="500" name="paper" id="paper" OnClick ="playGame()">
+            <img src="images/rock.jpg" height="500" name="rock" id="rock" OnClick ="playGame()">
+            <img src="images/scissors.jpg" height="500" name="scissors" id="scissors" OnClick ="playGame()">
+            </div>
+
+
+            <div id="computerchoice">
+                <h2>The Computer Chose</h2>
+            <img src="images/ai.jpg" height="500" name="ai" id = "ai" />
+            <h2 id="outcome" name="outcome"></h2>
+                <button id="play_game" name="play_game" OnClick ="playGame()">Play Next Round</button>
+            </div>
+            <h1 id="gameoutcome" name="gameoutcome"></h1>
+
+        </div>
+
+    </div>
 </div>
-<h2>The Computer Chose</h2>
-<img src="images/ai.jpg" height="500" name="ai" id = "ai" />
-<h2 id="outcome" name="outcome">Outcome!</h2>
+
+
 </body>
 </html>
 
