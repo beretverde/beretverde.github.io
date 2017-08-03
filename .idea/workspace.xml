@@ -2,59 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278541ea-e6be-4302-bd0e-e8770e823df3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/flash/ZeroClipboard.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/components.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/devices.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/expo-lyft.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/expo-newsweek.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/expo-riot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/expo-vogue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/img/sass-less.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/brand/bootstrap-outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/brand/bootstrap-punchout.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/brand/bootstrap-solid.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/css/docs.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/css/docs.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/css/ie10-viewport-bug-workaround.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/css/src/docs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/css/src/pygments-manni.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/customize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/docs.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/ie-emulation-modes-warning.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/ie10-viewport-bug-workaround.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/ie8-responsive-file-warning.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/raw-files.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/src/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/src/customizer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/Blob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/FileSaver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/ZeroClipboard.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/anchor.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/autoprefixer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/holder.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/jszip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/less.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/assets/js/vendor/uglify.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/scripts/bootstrap/dist/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/A9/uarc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/A9/index.html" afterPath="$PROJECT_DIR$/A9/index.html" />
     </list>
@@ -83,8 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/A9/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="774">
+              <caret line="238" column="53" lean-forward="true" selection-start-line="238" selection-start-column="53" selection-end-line="238" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -301,12 +248,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501527904692</updated>
       <workItem from="1501527929360" duration="8080000" />
-      <workItem from="1501699511392" duration="10870000" />
+      <workItem from="1501699511392" duration="12261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18950000" />
+    <option name="totallyTimeSpent" value="20341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1521" y="57" width="3759" height="2164" extended-state="6" />
@@ -452,8 +399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/A9/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="774">
+          <caret line="238" column="53" lean-forward="true" selection-start-line="238" selection-start-column="53" selection-end-line="238" selection-end-column="53" />
           <folding />
         </state>
       </provider>
