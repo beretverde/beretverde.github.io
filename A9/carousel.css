@@ -143,3 +143,10 @@ body {
 div.ui-datepicker{
   font-size:190%;
 }
+
+#selectable .ui-selecting {
+    background: #ccc;
+}
+#selectable .ui-selected {
+    background: #999;
+}
