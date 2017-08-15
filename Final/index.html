@@ -7,77 +7,90 @@
         var humanScore=0;
         var computerScore=0;
         var ties=0;
-        var roundCount=1;
+        var roundCount=0;
 
-        function ChangePic(imagename) {
-            picnum = Math.floor(Math.random() * 3) + 1;
-            newpicname = "images/comp" + picnum + ".jpg";
-            document.images[imagename].src = newpicname;
-
-        }
-
-
-//Add border to element that is selected
+        //Add border to element that is selected
+        //Its not setting the selected class on page load correctly
         $(function () {
             $("#humanchoices img").click(function() {
                 $(this).addClass("selected");
                 $("img").not(this).removeClass('selected');
             });
         });
+        //boilerplate image changer from class
+        function ChangePic(imagename) {
+            picnum = Math.floor(Math.random() * 3) + 1;
+            newpicname = "images/comp" + picnum + ".jpg";
+            document.images[imagename].src = newpicname;
+        }
+        //Hide the gameboard and show the new round button and game message
+        function gameOver(){
+            document.getElementById("gameBoard").classList.add("hide");
+            document.getElementById("newRound").classList.remove("hide");
+            document.getElementById("gameoutcome").classList.remove("hide");
+        }
+        //start a new game hide/show appropriate elements reset score
+        function newGame(){
+            document.getElementById("gameBoard").classList.remove("hide");
+            document.getElementById("gameoutcome").classList.add("hide");
+            document.getElementById("newRound").classList.add("hide");
+            document.getElementById("outcome").classList.add("hide");
+            document.getElementById("computerchoice").classList.add("hide");
 
+            humanScore = 0;
+            computerScore = 0;
+            roundCount = 0;
+            ties = 0;
+            printScores();
+        }
 
-
+        //driver for the game
         function playGame(){
 
-            ChangePic('ai');
-            var computerchoice = document.getElementById('computerchoice');
-            computerchoice.style.display = 'block';
-            var userchoice=document.getElementsByClassName('selected');
-            scoreGame(userchoice[0].id,picnum);
+                roundCount++
+                var userchoice=document.getElementsByClassName('selected');
+                ChangePic('ai');
+                var computerchoice = document.getElementById('computerchoice');
+                computerchoice.style.display = 'block';
 
-            if (roundCount <= 3) {
-                console.log("special case");
-            } else {
-                humanScore = 0;
-                computerScore = 0;
-                roundCount = 0;
-                ties=0;
+                scoreGame(userchoice[0].id,picnum);
                 printScores();
-                gameMessage();
-            }
-            roundCount++
-            document.getElementById("paper").classList.remove("selected");
-            document.getElementById("rock").classList.remove("selected");
-            document.getElementById("scissors").classList.remove("selected");
-            document.getElementById("paper").onclick=null;
-            document.getElementById("rock").onclick=null;
-            document.getElementById("scissors").onclick=null;
+
         }
+
+        //bind the scores to the UI check to see if its round 3
         function printScores(){
             document.getElementById("cScore").innerHTML="Computer Score: "+computerScore;
             document.getElementById("hScore").innerHTML="Human Score: "+humanScore;
             document.getElementById("round").innerHTML="Round Count: "+roundCount;
             document.getElementById("tieGames").innerHTML="Tie Games: "+ties;
+
+
+
+            if(roundCount==3) {
+                gameOver();
+
+                gameMessage();
+
+            }
         }
+
+        //Build the game message and display it
         function gameMessage(){
             var message;
             message="The Game is Over! You won "+humanScore+", and the computer won "+computerScore+". There were "+ties+" ties.";
             document.getElementById("gameoutcome").innerHTML=message;
         }
-
-        function myFunction() {
+        //Begin the game and display the gameboard
+        function start() {
+            document.getElementById("newRound").classList.add("hide");
             var gameBoard = document.getElementById('choices');
             var start = document.getElementById('start_game');
                 gameBoard.style.display = 'block';
                 start.style.display = 'none';
 
         }
-
-        function toggleRounds(){
-            document.getElementById("paper").onclick=playGame();
-            document.getElementById("rock").onclick=playGame();
-            document.getElementById("scissors").onclick=playGame();
-        }
+        //Score the game and display a textual message for each round
         function scoreGame(human, comp){
 
             var message;
@@ -110,7 +123,7 @@
                 message="Tie Game";
                 ties++;
             }
-
+            document.getElementById("outcome").classList.remove("hide");
             document.getElementById("outcome").innerHTML=message;
             printScores();
         }
@@ -128,6 +141,7 @@
             display:inline-block;
             margin-left: 30px;
             margin-right: 30px;
+            padding:10px 10px 10px 10px;
             border: 2px solid black;
         }
         #wrapper{
@@ -139,6 +153,10 @@
         #humanchoices img{
             margin:10px 20px 10px 20px;
         }
+        .hide{
+            display:none;
+        }
+
 
     </style>
 </head>
@@ -147,7 +165,7 @@
 <div id="wrapper" >
     <div id="container" >
         <h1>Rock Paper Scissors</h1>
-        <button id="start_game" name="start_game" onclick="myFunction()">PLAY</button>
+        <button id="start_game" name="start_game" onclick="start()">PLAY</button>
 
         <div id="choices" name="choices">
 
@@ -157,6 +175,7 @@
                 <h2 id="tieGames" name="tieGames">Tie Games</h2>
                 <h2 id="round" name="round">Round Count</h2>
             </div>
+            <div id="gameBoard">
             <h2>Make Your Choice</h2>
             <div id="humanchoices" name="humanchoices">
             <img src="images/paper.jpg" height="500" name="paper" id="paper" OnClick ="playGame()">
@@ -169,9 +188,12 @@
                 <h2>The Computer Chose</h2>
             <img src="images/ai.jpg" height="500" name="ai" id = "ai" />
             <h2 id="outcome" name="outcome"></h2>
-                <button id="play_game" name="play_game" OnClick ="toggleRounds()">Play Next Round</button>
+
+            </div>
             </div>
             <h1 id="gameoutcome" name="gameoutcome"></h1>
+
+            <button id="newRound" name="newRound" onclick="newGame()">Play Again</button>
 
         </div>
 
